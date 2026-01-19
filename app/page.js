@@ -1,5 +1,5 @@
-import { HOME_HTML } from "../data/homeMarkup";
+import HomePage from "../components/home/HomePage";
 
-export default function HomePage() {
-  return <div dangerouslySetInnerHTML={{ __html: HOME_HTML }} />;
+export default function Home() {
+  return <HomePage />;
 }

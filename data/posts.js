@@ -1,3 +1,13 @@
+/**
+ * @typedef {Object} Post
+ * @property {string} slug
+ * @property {string} title
+ * @property {string} date - ISO date string (YYYY-MM-DD).
+ * @property {string} description
+ * @property {string[]} body
+ */
+
+/** @type {Post[]} */
 export const posts = [
   {
     slug: "deliberate-suspension-of-disbelief",
@@ -12,6 +22,7 @@ export const posts = [
   }
 ];
 
+/** @type {Record<number, Post[]>} */
 export const postsByYear = posts.reduce((acc, post) => {
   const year = new Date(post.date).getFullYear();
   if (!acc[year]) acc[year] = [];
