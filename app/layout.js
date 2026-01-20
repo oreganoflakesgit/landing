@@ -1,24 +1,43 @@
 import "./globals.css";
-import { JetBrains_Mono, Manrope } from "next/font/google";
+import localFont from "next/font/local";
 
 export const metadata = {
   title: "Oregano Flakes",
   description: "Oregano Flakes personal website"
 };
 
-const manrope = Manrope({
-  subsets: ["latin"],
+const vt323 = localFont({
+  src: [
+    {
+      path: "../public/fonts/VT323/VT323-Regular.ttf",
+      weight: "400",
+      style: "normal"
+    }
+  ],
+  display: "swap",
   variable: "--font-sans"
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
+const jetbrainsMono = localFont({
+  src: [
+    {
+      path: "../public/fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf",
+      weight: "100 800",
+      style: "normal"
+    },
+    {
+      path: "../public/fonts/JetBrains_Mono/JetBrainsMono-Italic-VariableFont_wght.ttf",
+      weight: "100 800",
+      style: "italic"
+    }
+  ],
+  display: "swap",
   variable: "--font-mono"
 });
 
 const htmlClassName = [
   "_ne03rk _1e7jjv7 _78zum5 _dt5ytf _1j61x8r _1fzhlzt _1it3fuk _zmw1cu _t7dq6l _nqh3do _1eh507v _1us19tq _ish69e _vmm9iu _12wt3hh _txd6ia _qw41rl var(--font-sans)",
-  manrope.variable,
+  vt323.variable,
   jetbrainsMono.variable
 ].join(" ");
 

@@ -11,6 +11,15 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
+  webpack: (config, { dev }) => {
+    if (!dev) {
+      if (config.optimization) {
+        config.optimization.minimize = false;
+        config.optimization.minimizer = [];
+      }
+    }
+    return config;
+  },
   async headers() {
     return [
       {
