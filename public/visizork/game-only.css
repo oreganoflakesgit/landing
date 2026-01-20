@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: "VT323", monospace;
+  font-size: 22px;
+}
+
+.GameOnly #header,
+.GameOnly #appbody,
+.GameOnly #commentarypane {
+  display: none !important;
+}
+
+.GameOnly #gamebody {
+  top: 0;
+}
+
+.GameOnly #gameport {
+  left: 0;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  background: #000;
+}
+
+
+
+.GameOnly .ViewPane,
+.GameOnly .SourcePane,
+.GameOnly .TabBar,
+.GameOnly .TabContent {
+  display: none !important;
+}
+
+.GameOnly #windowport .WindowFrame {
+  display: none;
+}
+
+.GameOnly #windowport #window1 {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  background: #000;
+  color: #fff;
+}
+
+.GameOnly #windowport #window2 {
+  display: none;
+}
+
+.GameOnly .BufferWindow,
+.GameOnly .GridWindow {
+  background: #000;
+  color: #fff;
+  font-family: inherit !important;
+  font-size: 19px;
+  line-height: 1.2;
+}
+
+
+.GameOnly .Style_input,
+.GameOnly .Style_preformatted,
+.GameOnly .Style_header,
+.GameOnly .Style_subheader,
+.GameOnly .Style_alert,
+.GameOnly .Style_note {
+  color: #fff;
+  font-family: inherit !important;
+}
+
+.GameOnly .Input {
+  color: #fff !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
+.GameOnly .BufferWindow .BufferLine:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.GameOnly .Style_blockquote {
+  background: #111;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Zork 1</title>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+    <link
+      rel="stylesheet"
+      href="visiterp/css/app.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="visiterp/css/font.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="visiterp/css/glkote.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="visiterp/css/dialog.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="game-only.css" type="text/css" />
+
+    <script type="text/javascript">
+      function processBase64Zcode(base64data) {
+        var data = atob(base64data);
+        var image = new Uint8Array(data.length);
+        for (var ix = 0; ix < data.length; ix++) {
+          image[ix] = data.charCodeAt(ix);
+        }
+
+        window.gameimage = image;
+      }
+
+      var parchment_options = {};
+    </script>
+
+    <script src="js/zork1-r88-s840726.z3.js"></script>
+    <script src="js/gamedat.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/glkio.js"></script>
+    <script src="js/ifvms.js"></script>
+    <script src="js/gnusto.js"></script>
+    <script src="js/parchment.js"></script>
+  </head>
+  <body class="GameOnly">
+    <div id="gamebody">
+      <div id="gameport">
+        <div id="windowport">
+          <noscript>
+            <hr />
+            <p>You'll need to turn on Javascript in your web browser to play this game.</p>
+            <hr />
+          </noscript>
+        </div>
+        <div id="loadingpane">
+          <img src="visiterp/css/waiting.gif" alt="LOADING" />
+          <br />
+          <em>&nbsp;&nbsp;&nbsp;Loading...</em>
+        </div>
+        <div id="errorpane" style="display: none">
+          <div id="errorcontent">...</div>
+        </div>
+        <div id="commentarypane" style="display: none; opacity: 0">
+          <div id="commentaryheader">
+            <span id="commentarytitle">TITLE</span>
+            <div id="commentaryclose"><span>&#xD7;</span></div>
+          </div>
+          <div id="commentarycontent">
+            <div class="Commentary">
+              <p>Welcome to the commentary track.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
