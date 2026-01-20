@@ -1,4 +1,5 @@
 import SiteNav from "../../components/SiteNav";
+import ZorkEmbed from "../../components/ZorkEmbed";
 
 export const metadata = {
   title: "Zork | Oregano Flakes",
@@ -36,36 +37,14 @@ export default function ZorkPage() {
           style={{
             flex: "1",
             width: "100%",
+            maxWidth: "80ch",
             minHeight: 0,
             display: "flex",
-            flexDirection: "column"
+            flexDirection: "column",
+            margin: "0 auto"
           }}
         >
-          <img
-            src="/images/zork_sketchy_mono.png"
-            alt="Zork"
-            style={{
-              width: "260px",
-              height: "auto",
-              margin: "0 auto 16px",
-              display: "block"
-            }}
-          />
-          <iframe
-            src="/visizork/index-game.html"
-            title="Zork 1"
-            className="zork-iframe"
-            style={{
-              width: "calc(100% + 100px)",
-              height: "100%",
-              border: "0",
-              borderRadius: "12px",
-              marginLeft: "-50px",
-              background: "transparent",
-              display: "block"
-            }}
-            allow="fullscreen"
-          />
+          <ZorkEmbed />
         </section>
       </div>
     </main>

@@ -1,3 +1,5 @@
+import ZorkEmbed from "../ZorkEmbed";
+
 const parseInline = (text, keyPrefix, inlineCodeClassName, linkClassName) => {
   const inlinePattern = /(\[([^\]]+)\]\(([^)]+)\)|`([^`]+)`)/g;
   const parts = [];
@@ -66,6 +68,17 @@ export default function MarkdownRenderer({
 
     if (!line.trim()) {
       index += 1;
+      continue;
+    }
+
+    if (line.trim() === "[[ZORK_EMBED]]") {
+      blocks.push(
+        <div key={`zork-${key}`} style={{ margin: "24px 0" }}>
+          <ZorkEmbed />
+        </div>
+      );
+      index += 1;
+      key += 1;
       continue;
     }
 
