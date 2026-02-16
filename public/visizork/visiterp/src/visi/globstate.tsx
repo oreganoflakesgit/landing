@@ -1,0 +1,208 @@
+import React from 'react';
+import { useState, useContext, createContext } from 'react';
+
+import { ZObject } from './zstate';
+import { gamedat_global_nums, gamedat_globals_sort_index, gamedat_globals_sort_alpha, gamedat_object_ids, check_commentary } from '../custom/gamedat';
+import { GlobalData, unpack_address, signed_zvalue } from '../custom/gamedat';
+
+import { ReactCtx } from './context';
+import { ObjPageLink, Commentary } from './widgets';
+import { VarShowObject, VarShowString, VarShowWord, VarShowVerb, VarShowProperty } from './globshow';
+import { global_value_display } from '../custom/cwidgets';
+
+export type GlobListContextContent = {
+    selected: number;
+    setSelected: (val:number) => void;
+};
+
+function new_context() : GlobListContextContent
+{
+    return {
+        selected: -1,
+        setSelected: (val) => {},
+    };
+}
+
+const GlobListCtx = createContext(new_context());
+
+export function GlobalState()
+{
+    const [ selected, setSelected ] = useState(-1);
+    const [ sort, setSort ] = useState('addr');
+    
+    let rctx = useContext(ReactCtx);
+    let zstate = rctx.zstate;
+
+    let sortglobs: GlobalData[];
+    if (sort == 'recent') {
+        let updatetimes = zstate.globalsupdate;
+        sortglobs = [ ...gamedat_globals_sort_index ];
+        sortglobs.sort((g1, g2) => {
+            let up2 = updatetimes[g2.num];
+            let up1 = updatetimes[g1.num];
+            if (up2 != up1)
+                return (up2 - up1);
+            return g1.num - g2.num;
+        });
+    }
+    else if (sort == 'alpha') {
+        sortglobs = gamedat_globals_sort_alpha;
+    }
+    else {
+        sortglobs = gamedat_globals_sort_index;
+    }
+
+    let counter = 0;
+    let globls = [];
+    while (counter < zstate.globals.length) {
+        if (sortglobs[counter] !== undefined) {
+            let index = sortglobs[counter].num;
+            globls.push(<GlobalVar key={ index } index={ index } value={ zstate.globals[index] } origvalue={ zstate.origglobals[index] } />);
+        }
+        counter++;
+    }
+
+    function evhan_click_background(ev: React.MouseEvent<HTMLDivElement, MouseEvent>) {
+        ev.stopPropagation();
+        setSelected(-1);
+    }
+
+    function evhan_sort_change(val: string) {
+        setSort(val);
+    }
+    
+    return (
+        <GlobListCtx.Provider value={ { selected, setSelected } }>
+            <div className="ScrollContent" onClick={ evhan_click_background }>
+                <div>
+                    Sort by{' '}
+                    <input id="sortaddr_radio" type="radio" name="sort" value="addr" checked={ sort=='addr' } onChange={ (ev) => evhan_sort_change('addr') } />
+                    <label htmlFor="sortaddr_radio">Address</label>{' '}
+                    <input id="sortalpha_radio" type="radio" name="sort" value="alpha" checked={ sort=='alpha' } onChange={ (ev) => evhan_sort_change('alpha') } />
+                    <label htmlFor="sortalpha_radio">Alpha</label>
+                    <input id="sortrecent_radio" type="radio" name="sort" value="recent" checked={ sort=='recent' } onChange={ (ev) => evhan_sort_change('recent') } />
+                    <label htmlFor="sortrecent_radio">Recent</label>
+                </div>
+                { (rctx.shownumbers ?
+                   <div>
+                       Global variables begin at address { rctx.zstate.globtableaddr }.
+                   </div>
+                   : null) }
+                <ul className="DataList">
+                    { globls }
+                </ul>
+            </div>
+        </GlobListCtx.Provider>
+    );
+}
+
+export function GlobalVar({ index, value, origvalue }: { index:number, value:number, origvalue:number })
+{
+    let rctx = useContext(ReactCtx);
+    let ctx = useContext(GlobListCtx);
+    let selected = ctx.selected;
+    
+    let changed = (value != origvalue);
+    let glo = gamedat_global_nums.get(index);
+
+    if (!glo) {
+        return (
+            <li>??? { value }</li>
+        )
+    }
+
+    let vartype: JSX.Element|null = null;
+    let withnum = false;
+
+    if (glo.vartype) {
+        vartype = global_value_display(glo.vartype, value, glo);
+    }
+
+    if (vartype == null) {
+        switch (glo.vartype) {
+        case 'OBJ':
+            vartype = <VarShowObject value={ value } />;
+            break;
+        case 'STR':
+            vartype = <VarShowString value={ value } />;
+            break;
+        case 'WORD':
+            vartype = <VarShowWord value={ value } />;
+            break;
+        case 'VERB':
+            vartype = <VarShowVerb value={ value } />;
+            break;
+        case 'PROP':
+            vartype = <VarShowProperty value={ value } />;
+            break;
+        case 'DATA':
+            vartype = <i>data table in source</i>;
+            break;
+        case 'TABLE':
+            vartype = <i>runtime table</i>;
+            break;
+        case 'UNUSED':
+            vartype = <>{ value } <i>(not used)</i></>
+            withnum = true;
+            break;
+        case '':
+        case undefined:
+            vartype = <span>{ signed_zvalue(value) }</span>;
+            withnum = true;
+            break;
+        default:
+            vartype = <i>{ glo.vartype }</i>;
+            break;
+        }
+    }
+
+    let origtext = 'original value: ';
+    if (changed) {
+        if (glo.vartype == 'OBJ') {
+            if (origvalue == 0) {
+                origtext += 'nothing';
+            }
+            else {
+                let obj = gamedat_object_ids.get(origvalue);
+                origtext += (obj ? obj.name : '???');
+            }
+        }
+        else {
+            origtext += origvalue;
+        }
+    }
+
+    let withcom = check_commentary(glo.name, 'GLOB');
+    
+    function evhan_click(ev: React.MouseEvent<HTMLLIElement, MouseEvent>) {
+        ev.stopPropagation();
+        ctx.setSelected(index);
+        let obj = gamedat_global_nums.get(index);
+        if (obj && obj.sourceloc.length)
+            rctx.setLoc(obj.sourceloc, false);
+    }
+    
+    return (
+        <li className={ (index==selected) ? 'Selected' : '' } onClick={ evhan_click }>
+            { (withcom ?
+               <Commentary topic={ withcom } smaller={ true } />
+               : null) }
+            { (rctx.shownumbers ?
+               <span className="ShowAddr">{ index }: </span>
+               : null) }
+            <code>{ glo.name }</code>:{' '}
+            { (changed ?
+               <span className="ChangedNote" title={ origtext }>*</span>
+               : null) }
+            { ((rctx.shownumbers && !withnum) ?
+               <>
+                   <span className="ShowAddr">({ value })</span>{' '}
+               </>
+               : null) }
+            { vartype ? vartype : null }
+            { (withcom ?
+               <span className="LineExtraHeightSmall"></span>
+               : null) }
+        </li>
+    );
+}

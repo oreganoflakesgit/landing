@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: "VT323", monospace;
+  font-size: 22px;
+}
+
+.GameOnly #header,
+.GameOnly #appbody,
+.GameOnly #commentarypane {
+  display: none !important;
+}
+
+.GameOnly #gamebody {
+  top: 0;
+}
+
+.GameOnly #gameport {
+  left: 0;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  background: #000;
+}
+
+
+
+.GameOnly .ViewPane,
+.GameOnly .SourcePane,
+.GameOnly .TabBar,
+.GameOnly .TabContent {
+  display: none !important;
+}
+
+.GameOnly #windowport .WindowFrame {
+  display: none;
+}
+
+.GameOnly #windowport #window1 {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  background: #000;
+  color: #fff;
+}
+
+.GameOnly #windowport #window2 {
+  display: none;
+}
+
+.GameOnly .BufferWindow,
+.GameOnly .GridWindow {
+  background: #000;
+  color: #fff;
+  font-family: inherit !important;
+  font-size: 19px;
+  line-height: 1.2;
+}
+
+
+.GameOnly .Style_input,
+.GameOnly .Style_preformatted,
+.GameOnly .Style_header,
+.GameOnly .Style_subheader,
+.GameOnly .Style_alert,
+.GameOnly .Style_note {
+  color: #fff;
+  font-family: inherit !important;
+}
+
+.GameOnly .Input {
+  color: #fff !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
+.GameOnly .BufferWindow .BufferLine:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.GameOnly .Style_blockquote {
+  background: #111;
+}
+
+/* Make save/restore modal coherent with the embedded CRT look. */
+.GameOnly #dialog_screen {
+  opacity: 1;
+  background: rgba(2, 10, 7, 0.82);
+  z-index: 40;
+  backdrop-filter: blur(2px);
+}
+
+.GameOnly #dialog_frame {
+  z-index: 41;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.GameOnly #dialog {
+  width: min(560px, 94vw);
+  margin: 0;
+  background: radial-gradient(120% 130% at 50% 8%, #131e18 0%, #07110c 56%, #040705 100%);
+  color: #d7ffe8;
+  border: 1px solid rgba(80, 255, 190, 0.34);
+  border-radius: 14px;
+  box-shadow:
+    0 24px 56px rgba(0, 0, 0, 0.75),
+    0 0 28px rgba(80, 255, 190, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  font-family: "VT323", monospace;
+  font-size: 30px;
+  line-height: 1.1;
+}
+
+.GameOnly #dialog .DiaCaption,
+.GameOnly #dialog .DiaWarning,
+.GameOnly #dialog .DiaInput,
+.GameOnly #dialog .DiaBody,
+.GameOnly #dialog .DiaButtons,
+.GameOnly #dialog .DiaButtonsFloat {
+  margin: 14px 16px;
+}
+
+.GameOnly #dialog .DiaWarning {
+  color: #8ddfb8;
+  font-size: 22px;
+  font-style: normal;
+}
+
+.GameOnly #dialog input,
+.GameOnly #dialog select,
+.GameOnly #dialog button {
+  font-family: inherit;
+  font-size: 28px;
+}
+
+.GameOnly #dialog input,
+.GameOnly #dialog select {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  background: #030806;
+  color: #e6fff2;
+  border: 1px solid rgba(80, 255, 190, 0.35);
+  border-radius: 8px;
+  padding: 8px 10px;
+  outline: none;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.GameOnly #dialog select {
+  min-height: 170px;
+}
+
+.GameOnly #dialog select option {
+  background: #050b08;
+  color: #dfffee;
+}
+
+.GameOnly #dialog input:focus,
+.GameOnly #dialog select:focus {
+  border-color: rgba(80, 255, 190, 0.78);
+  box-shadow:
+    inset 0 0 0 1px rgba(80, 255, 190, 0.25),
+    0 0 0 2px rgba(80, 255, 190, 0.22);
+}
+
+.GameOnly #dialog .DiaButtons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.GameOnly #dialog .DiaButtonsFloat {
+  float: none;
+  text-align: right;
+}
+
+.GameOnly #dialog button {
+  margin: 0;
+  padding: 6px 12px;
+  background: linear-gradient(180deg, #0f2018 0%, #09130d 100%);
+  color: #dfffee;
+  border: 1px solid rgba(80, 255, 190, 0.35);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 120ms ease, box-shadow 120ms ease, transform 120ms ease;
+}
+
+.GameOnly #dialog button:hover {
+  border-color: rgba(80, 255, 190, 0.7);
+  box-shadow: 0 0 0 1px rgba(80, 255, 190, 0.25);
+}
+
+.GameOnly #dialog button:active {
+  transform: translateY(1px);
+}
+
+.GameOnly #dialog button:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+}
+
+.GameOnly #dialog .DiaDisplayText {
+  height: 220px;
+  background: #030806;
+  color: #dfffee;
+  border: 1px solid rgba(80, 255, 190, 0.35);
+  border-radius: 8px;
+  font-size: 24px;
+  line-height: 1.15;
+  padding: 10px 12px;
+}
+
+@media (max-width: 640px) {
+  .GameOnly #dialog {
+    width: 96vw;
+    font-size: 25px;
+  }
+
+  .GameOnly #dialog input,
+  .GameOnly #dialog select,
+  .GameOnly #dialog button {
+    font-size: 24px;
+  }
+
+  .GameOnly #dialog .DiaWarning,
+  .GameOnly #dialog .DiaDisplayText {
+    font-size: 20px;
+  }
+}
