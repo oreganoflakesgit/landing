@@ -58,6 +58,11 @@ export default function SiteNav({ withViewTransitions = false }) {
           </Link>
         </li>
         <li className="_jp7ctv">
+          <Link href="/quotes" className={navLinkClassName}>
+            Quotes
+          </Link>
+        </li>
+        <li className="_jp7ctv">
           <Link href="/zork" className={navLinkClassName}>
             Zork
           </Link>

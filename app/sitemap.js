@@ -18,6 +18,11 @@ export default function sitemap() {
       url: `${siteUrl}/zork`,
       changeFrequency: "monthly",
       priority: 0.5
+    },
+    {
+      url: `${siteUrl}/quotes`,
+      changeFrequency: "monthly",
+      priority: 0.5
     }
   ];
 
