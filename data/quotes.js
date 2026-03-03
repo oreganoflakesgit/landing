@@ -47,5 +47,13 @@ export const quotes = [
     authorUrl: "https://x.com/staysaasy/status/2024969060706865341",
     primaryHashtag: "life",
     secondaryHashtags: ["management"]
+  }),
+  createQuote({
+    id: "halvar-flake-spine-luxury",
+    text: "The most expensive luxury item you can own is a spine.",
+    author: "Halvar Flake",
+    authorUrl: "https://x.com/halvarflake/status/2027691153106079868",
+    primaryHashtag: "life",
+    secondaryHashtags: []
   })
 ];
