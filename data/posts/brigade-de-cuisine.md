@@ -1,4 +1,4 @@
-## I. The Brigade
+## The Brigade
 
 In 1870, a twenty-three-year-old Chef de Cuisine for the French army faced the challenge of feeding a quarter million men trapped inside the besieged fortress of Metz. When conventional supplies ran out - backs against the wall, surrounded on all sides - he began slaughtering horses to feed his people. A thousand a day, cooked with what was left. Auguste Escoffier ran out of horses before the Prussians ran out of patience. He turned twenty-four the day after they surrendered.
 
@@ -10,7 +10,7 @@ Practising this approach in various kitchens for nearly two decades, in 1890 he 
 
 Lastly, he innovated a la carte service. Replaced multi-course meals with focused menus that offered higher margins and faster table turns. Created dishes for specific patrons to build prestige and relationships - most famously Peche Melba for the opera singer Nellie Melba, a grandeur dessert served on a carved ice swan. He built a brand with Ritz that would define luxury hospitality for a century. The distance between horse meat at Metz and an ice swan at the Savoy is the arc of his entire career - turning servitude into disciplined craft, and then into something no one at the time had considered cooking could even become: art.
 
-## II. The Commis
+## The Commis
 
 The commis who chops onions all day is doing necessary work. The vegetables need dicing. The herbs need picking from their stems. The stocks need starting. Without it, the kitchen doesn't function. But it's not cooking. The chef de partie times five dishes simultaneously, adjusts seasoning by taste, makes real-time calls about a sauce that's reducing too fast. The sous chef orchestrates the entire line during service - tasting from every station, reading the wave of orders before it hits. That's the craft.
 
@@ -22,7 +22,7 @@ In consulting, the difference is sharper still. An in-house PM can lean on the o
 
 70% of first-time restaurant diners never come back. Not because the food was bad, but because nobody made them feel special. 85% of new consulting business comes from referrals and recurrence, not cold bids. The administrator dices the onion and waits for the next one. The manager creates the experience that turns your guests into regulars.
 
-## III. The Pass
+## The Pass
 
 Then the kitchen started shrinking.
 
@@ -36,7 +36,7 @@ IT built the same wall. Salesperson on one side handling the *why* - why do we b
 
 The handoff is a menu that tells you what the dishes are called. It won't tell you the taste, what the chef was thinking, or what the guest really wanted. This is the cost of the wall. When the kitchen was big enough, organizations had enough staff on both sides to absorb the inefficiencies in the budget. It is not big enough anymore. When you automate the mechanical layer, inevitably the pass will have to come down too - because it was never a good architecture to begin with, and there won't be enough people on either side to justify it any longer. Delivery and relationship will merge into one entity with no pass to hide behind anymore.
 
-## IV. Actually Cooking
+## Actually Cooking
 
 A head chef who can't debone a fish can't evaluate the garde manger's work, tell when a commis is cutting corners, or improvise when a shipment arrives late. Understanding the work well enough to know when "just a small change" means two hours and when it means two weeks has enormous leverage. The technical depth is also your credibility floor.
 
