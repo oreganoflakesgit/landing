@@ -1,0 +1,47 @@
+## I. The Brigade
+
+In 1870, a twenty-three-year-old Chef de Cuisine for the French army faced the challenge of feeding a quarter million men trapped inside the besieged fortress of Metz. When conventional supplies ran out - backs against the wall, surrounded on all sides - he began slaughtering horses to feed his people. A thousand a day, cooked with what was left. Auguste Escoffier ran out of horses before the Prussians ran out of patience. He turned twenty-four the day after they surrendered.
+
+Escoffier had lived inside professional kitchens since he was twelve. His father sent him to apprentice in his uncle's restaurant. Professional kitchens at the time were, by contemporary accounts, living hell. Wood-fired and overheated, with cooks blasting their thirst with heavy amounts of liquor. No hierarchy or division of labor. Chefs simply screamed profanities at their underlings, embracing the ubiquitous chaos. The profession was closer to tiresome servitude of manual labor than craft. Escoffier endured these conditions for eight years before the war called him to Metz.
+
+At Metz the conditions were worse but the chaos wasn't. A quarter million men, no food, horses for meat - and yet they ate, at least for a while, because everything ran on a chain of command. Orders flowed down, reports flowed up. It worked under conditions where nothing should. Escoffier had seen what kitchens were without structure and experienced firsthand what structure could do without a kitchen. He decided to bring the second into the first.
+
+Practising this approach in various kitchens for nearly two decades, in 1890 he arrived at London's Savoy Hotel, invited by Cesar Ritz to impose his system there. Stations with clear responsibilities: garde manger for cold work, saucier for sauces, patissier for pastry, rotisseur for roasting. A chef de partie running each station, sous chefs coordinating across them, commis doing the mechanical prep at the bottom. But he didn't stop there. He banned alcohol from his kitchen at a time when drinking on any job was not merely tolerated but often expected, replacing it with a barley drink instead. He banned swearing and profanities. Standardized white uniforms, associating cooks with doctors rather than manual laborers. Service times dropped by 40%.
+
+Lastly, he innovated a la carte service. Replaced multi-course meals with focused menus that offered higher margins and faster table turns. Created dishes for specific patrons to build prestige and relationships - most famously Peche Melba for the opera singer Nellie Melba, a grandeur dessert served on a carved ice swan. He built a brand with Ritz that would define luxury hospitality for a century. The distance between horse meat at Metz and an ice swan at the Savoy is the arc of his entire career - turning servitude into disciplined craft, and then into something no one at the time had considered cooking could even become: art.
+
+## II. The Commis
+
+The commis who chops onions all day is doing necessary work. The vegetables need dicing. The herbs need picking from their stems. The stocks need starting. Without it, the kitchen doesn't function. But it's not cooking. The chef de partie times five dishes simultaneously, adjusts seasoning by taste, makes real-time calls about a sauce that's reducing too fast. The sous chef orchestrates the entire line during service - tasting from every station, reading the wave of orders before it hits. That's the craft.
+
+For decades, IT could afford not to tell the difference. In large enough organizations, project administration passed for cooking. Updating Jira tickets. Writing status reports. Scheduling meetings. The kitchen was big enough to carry people whose entire contribution was mechanical prep. They had PM titles. They looked busy. But the best PM work is invisible. Miscommunication caught ahead of time. Change surfaced before it consumes the budget. Conflict defused on the spot. Sadly, nobody compliments the absence of smoke.
+
+It makes all the difference in the world whether you reach for the SOW or the friendly phone call to make your client realise he drifts from the scope. One clearly tells your client that according to Section 3.2 he can go fuck himself, the other makes the drift disappear without a trace. When an engineer and his estimate slip, the Project Administrator will have a board, chart and three follow-ups to remind him he is a piece of shit. The Project Manager will have a team in place that will effortlessly pull together before it becomes a problem. One accountability is forced by the system, the other is inspired and has a system to support it.
+
+In consulting, the difference is sharper still. An in-house PM can lean on the org chart, the escalation path and the quiet leverage of permanence. He will still be there next quarter and everyone knows it. The consultant has none of it. There is a limit on how many times you can cite a contract in your mail before the relationship takes damage, and it's usually one.
+
+70% of first-time restaurant diners never come back. Not because the food was bad, but because nobody made them feel special. 85% of new consulting business comes from referrals and recurrence, not cold bids. The administrator dices the onion and waits for the next one. The manager creates the experience that turns your guests into regulars.
+
+## III. The Pass
+
+Then the kitchen started shrinking.
+
+AI automates the chopping. Meeting summaries, status reports, ticket updates and risk registers. The entire mechanical layer of project administration is being compressed. The machine chops faster, doesn't get sick and never misses a standup.
+
+Most professional kitchens have a steel counter called the pass, with heat lamps above marking the subtle boundary between back and front of the house. This is the head chef's post - not at the stove or the cutting board. He calls orders into the kitchen, coordinates timings across stations so every dish for a table arrives together, and inspects every plate before it crosses making sure each detail is perfect. Nothing reaches the guests without passing through his hands and judgement.
+
+On the other side of the counter stands the maitre d', running a completely different operation - seating, pacing and reading the room. Two leaders with two domains and one narrow counter between them. When it works, it's magnificent. Kitchen signals how long, floor how urgent, and the guest never sees the seam. When it doesn't, food dies under heat lamps because no one told the kitchen that table twelve got wasted and left.
+
+IT built the same wall. Salesperson on one side handling the *why* - why do we build what we build and managing the relationship that gets the deal signed. Project Manager on the other side handling the *how* - how do we build what was sold, assembling the team and running the project. When it works, the *what* emerges. And it's beautiful. Two leaders, two domains, one narrow handoff process between them.
+
+The handoff is a menu that tells you what the dishes are called. It won't tell you the taste, what the chef was thinking, or what the guest really wanted. This is the cost of the wall. When the kitchen was big enough, organizations had enough staff on both sides to absorb the inefficiencies in the budget. It is not big enough anymore. When you automate the mechanical layer, inevitably the pass will have to come down too - because it was never a good architecture to begin with, and there won't be enough people on either side to justify it any longer. Delivery and relationship will merge into one entity with no pass to hide behind anymore.
+
+## IV. Actually Cooking
+
+A head chef who can't debone a fish can't evaluate the garde manger's work, tell when a commis is cutting corners, or improvise when a shipment arrives late. Understanding the work well enough to know when "just a small change" means two hours and when it means two weeks has enormous leverage. The technical depth is also your credibility floor.
+
+But just the floor. Escoffier didn't reform kitchens by being the best cook in the room. He understood something bigger. He banned drinking and screaming, put his cooks in white, and told them they were professionals, not laborers - to make sure delivery was there. He created things like Peche Melba for specific people, with attention to who they were, to delight them, build relationship and intimacy - to make sure dishes would be ordered. Then he stood in the middle, watching the beauty unfold.
+
+A study of 3,000 B2B buyers found that personal value has twice the impact on commercial outcomes as business value. 53% of B2B customer loyalty comes from the delivery experience itself, not the brand, product or price. Every chef who has ever turned a first-time diner into a regular knows this arithmetic.
+
+Escoffier organized kitchens, created personalized dishes, negotiated with suppliers, trained a generation of craft cooks, and built a reputation that outlived him by a century. He didn't context-switch between craft and commerce - they were all the same to him. For decades, organizations could afford to pass off commis as chefs. That era is ending. We automated the chopping, and soon only those who learned to cook along the way will be the ones left in the kitchen.
