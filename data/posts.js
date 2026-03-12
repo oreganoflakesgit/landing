@@ -13,8 +13,7 @@ export const posts = [
     slug: "brigade-de-cuisine",
     title: "Brigade de Cuisine",
     date: "2026-02-28",
-    description:
-      "Auguste Escoffier's brigade system as a lens for understanding why AI is compressing project administration and rewarding people who can actually cook.",
+    description: "",
     body: [
       "Escoffier turned chaotic kitchens into disciplined systems, then into an art form built on delivery, hierarchy, and hospitality.",
       "That same distinction separates mechanical project administration from real management: invisible coordination, judgement, and trust.",
