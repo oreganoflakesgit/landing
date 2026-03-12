@@ -12,7 +12,7 @@ export const posts = [
   {
     slug: "brigade-de-cuisine",
     title: "Brigade de Cuisine",
-    date: "2026-03-12",
+    date: "2026-02-28",
     description:
       "Auguste Escoffier's brigade system as a lens for understanding why AI is compressing project administration and rewarding people who can actually cook.",
     body: [
