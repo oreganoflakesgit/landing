@@ -99,7 +99,7 @@ code, kbd, pre, samp{
   width: 100%;
   aspect-ratio: 1672 / 941;
   max-height: min(72vh, 820px);
-  margin: 1.5rem 0 2rem;
+  margin: 0 0 2rem;
   overflow: hidden;
   border-radius: 8px 8px 0 0;
   background: var(--_h7845g);

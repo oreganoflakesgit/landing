@@ -8,8 +8,6 @@ import { posts } from "../../../data/posts";
 
 const articleWrapClassName = "_78zum5 _1iyjqo2 _dt5ytf _6s0dn4";
 const articleClassName = "_78zum5 _dt5ytf _1iyjqo2 _1uz70x1 _1sjtlrb wide-article";
-const metaClassName = "_ss6m8b _1f6x5sh _2lah0s _1a11q2q _18vcv9u";
-const titleClassName = "_nqh3do _1c8ti3v _1ve93yz _iksgxq _1fzhlzt";
 const descriptionClassName = "_1f6x5sh _1jchvi3 _1evy7pa _1lv5wty";
 const sectionHeadingClassName = "_nqh3do _1c3i2sq _1s688f _1d0ylna";
 const paragraphClassName = "_nqh3do _1jchvi3 _1evy7pa _1lv5wty";
@@ -123,16 +121,6 @@ export default function PostPage({ params }) {
         vt-share="_1mn1rqb"
       >
         <article className={articleClassName}>
-          <p className={metaClassName}>{post.date}</p>
-          <h1
-            className={titleClassName}
-            style={{ viewTransitionName: `blog-title-${post.slug}` }}
-          >
-            {post.title}
-          </h1>
-          {post.description ? (
-            <p className={descriptionClassName}>{post.description}</p>
-          ) : null}
           {post.image ? (
             <figure className="blog-post-header-image">
               <Image
@@ -144,6 +132,9 @@ export default function PostPage({ params }) {
                 priority
               />
             </figure>
+          ) : null}
+          {post.description ? (
+            <p className={descriptionClassName}>{post.description}</p>
           ) : null}
           {markdown ? (
             <MarkdownRenderer
