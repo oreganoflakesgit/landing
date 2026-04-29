@@ -4,6 +4,7 @@
  * @property {string} title
  * @property {string} date - ISO date string (YYYY-MM-DD).
  * @property {string} description
+ * @property {{src: string, alt: string, width: number, height: number}=} image
  * @property {string[]} body
  */
 
@@ -14,6 +15,12 @@ export const posts = [
     title: "Brigade de Cuisine",
     date: "2026-02-28",
     description: "",
+    image: {
+      src: "/images/brigade_de_cuisine.png",
+      alt: "Brigade de Cuisine",
+      width: 1672,
+      height: 941
+    },
     body: [
       "Escoffier turned chaotic kitchens into disciplined systems, then into an art form built on delivery, hierarchy, and hospitality.",
       "That same distinction separates mechanical project administration from real management: invisible coordination, judgement, and trust.",

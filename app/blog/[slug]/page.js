@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
+import Image from "next/image";
 import SiteNav from "../../../components/SiteNav";
 import MarkdownRenderer from "../../../components/blog/MarkdownRenderer";
 import { posts } from "../../../data/posts";
@@ -19,8 +20,12 @@ const codeBlockClassName =
   "_1m1lls2 _1uz70x1 _1j6x5gx _w2csxc _4w1nh8 _1dcheo9 _1evy7pa _1lv5wty";
 const inlineCodeClassName = "_4w1nh8 _1dcheo9";
 const linkClassName = "_1bvjpef";
-const ogImage = "/images/41353cc3-6c9f-4d36-a22b-80189f131fcc.png";
-const ogImageAlt = "Portrait of Oregano Flakes";
+const defaultOgImage = {
+  src: "/images/41353cc3-6c9f-4d36-a22b-80189f131fcc.png",
+  width: 1600,
+  height: 2000,
+  alt: "Portrait of Oregano Flakes"
+};
 
 const markdownDir = path.join(process.cwd(), "data", "posts");
 
@@ -53,6 +58,7 @@ export function generateMetadata({ params }) {
     post.description?.trim() || post.body?.[0] || "Blog post on Oregano Flakes.";
   const url = `/blog/${post.slug}`;
   const publishedTime = `${post.date}T00:00:00.000Z`;
+  const image = post.image || defaultOgImage;
 
   return {
     title: post.title,
@@ -69,10 +75,10 @@ export function generateMetadata({ params }) {
       authors: ["Oregano Flakes"],
       images: [
         {
-          url: ogImage,
-          width: 1600,
-          height: 2000,
-          alt: ogImageAlt
+          url: image.src,
+          width: image.width,
+          height: image.height,
+          alt: image.alt
         }
       ]
     },
@@ -80,7 +86,7 @@ export function generateMetadata({ params }) {
       card: "summary_large_image",
       title: post.title,
       description,
-      images: [ogImage]
+      images: [image.src]
     }
   };
 }
@@ -126,6 +132,18 @@ export default function PostPage({ params }) {
           </h1>
           {post.description ? (
             <p className={descriptionClassName}>{post.description}</p>
+          ) : null}
+          {post.image ? (
+            <figure className="blog-post-header-image">
+              <Image
+                src={post.image.src}
+                alt={post.image.alt}
+                width={post.image.width}
+                height={post.image.height}
+                sizes="(min-width: 1024px) 80ch, calc(100vw - 2rem)"
+                priority
+              />
+            </figure>
           ) : null}
           {markdown ? (
             <MarkdownRenderer
