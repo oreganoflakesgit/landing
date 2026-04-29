@@ -95,18 +95,33 @@ code, kbd, pre, samp{
 }
 
 .blog-post-header-image{
+  position: relative;
   width: 100%;
   aspect-ratio: 1672 / 941;
-  margin-block: 1.5rem;
+  max-height: min(72vh, 820px);
+  margin: 1.5rem 0 2rem;
   overflow: hidden;
-  border-radius: 8px;
-  background: var(--_x1wbd3);
+  border-radius: 8px 8px 0 0;
+  background: var(--_h7845g);
 }
 
 .blog-post-header-image img{
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.blog-post-header-image::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--_h7845g) 12%, transparent) 0%,
+    transparent 32%,
+    var(--_h7845g) 100%
+  );
 }
 
 @media (max-width: 640px) {

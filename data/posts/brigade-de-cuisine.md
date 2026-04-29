@@ -1,5 +1,3 @@
-## The Brigade
-
 In 1870, a twenty-three-year-old Chef de Cuisine for the French army faced the challenge of feeding a quarter million men trapped inside the besieged fortress of Metz. When conventional supplies ran out - backs against the wall, surrounded on all sides - he began slaughtering horses to feed his people. A thousand a day, cooked with what was left. Auguste Escoffier ran out of horses before the Prussians ran out of patience. He turned twenty-four the day after they surrendered.
 
 Escoffier had lived inside professional kitchens since he was twelve. His father sent him to apprentice in his uncle's restaurant. Professional kitchens at the time were, by contemporary accounts, living hell. Wood-fired and overheated, with cooks blasting their thirst with heavy amounts of liquor. No hierarchy or division of labor. Chefs simply screamed profanities at their underlings, embracing the ubiquitous chaos. The profession was closer to tiresome servitude of manual labor than craft. Escoffier endured these conditions for eight years before the war called him to Metz.

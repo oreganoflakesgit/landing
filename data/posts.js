@@ -32,6 +32,12 @@ export const posts = [
     title: "Deliberate Suspension of Disbelief",
     date: "2025-01-10",
     description: "",
+    image: {
+      src: "/images/deliberate_suspension_of_disbelief.png",
+      alt: "Deliberate Suspension of Disbelief",
+      width: 1672,
+      height: 941
+    },
     body: [
       "A look back at text adventures, procedural worlds, and the evolution of immersive experiences.",
       "Why understanding the mechanisms can add wonder instead of subtracting it.",
