@@ -47,7 +47,7 @@ export const posts = [
   {
     slug: "deliberate-suspension-of-disbelief",
     title: "Deliberate Suspension of Disbelief",
-    date: "2025-01-10",
+    date: "2026-01-10",
     description: "",
     image: {
       src: "/images/deliberate_suspension_of_disbelief.png",
