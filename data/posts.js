@@ -13,7 +13,7 @@ export const posts = [
   {
     slug: "locust",
     title: "Locust",
-    date: "2026-04-28",
+    date: "2026-03-28",
     description: "",
     image: {
       src: "/images/locust.png",
