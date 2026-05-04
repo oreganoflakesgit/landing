@@ -11,6 +11,23 @@
 /** @type {Post[]} */
 export const posts = [
   {
+    slug: "locust",
+    title: "Locust",
+    date: "2026-04-28",
+    description: "",
+    image: {
+      src: "/images/locust.png",
+      alt: "Locust",
+      width: 1672,
+      height: 941
+    },
+    body: [
+      "Ordinary insects in ordinary conditions cross a threshold and become a different animal.",
+      "Teams can do the same when healthy rituals stack into an apparatus that consumes the work.",
+      "The real job is learning to hear when the hum of a healthy team is turning into a swarm."
+    ]
+  },
+  {
     slug: "brigade-de-cuisine",
     title: "Brigade de Cuisine",
     date: "2026-02-28",
