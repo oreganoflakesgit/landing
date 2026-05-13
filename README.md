@@ -15,16 +15,7 @@ Then open http://localhost:3000.
 
 - `/` home
 - `/blog` blog index
-- `/quotes` interactive quotes knowledge graph (3D)
 - `/zork` zork page
-
-## Quotes graph
-
-- Page: `app/quotes/page.js`
-- Graph component: `components/quotes/QuotesKnowledgeGraph.js`
-- Data source: `data/quotes.js`
-
-The graph links quotes by shared secondary hashtags and supports hashtag cluster filtering.
 
 ## Scripts
 
