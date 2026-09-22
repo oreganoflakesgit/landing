@@ -53,6 +53,11 @@ export default function SiteNav({ withViewTransitions = false }) {
       <div></div>
       <ul className="_jp7ctv">
         <li className="_jp7ctv">
+          <Link href="/home" className={navLinkClassName}>
+            Home
+          </Link>
+        </li>
+        <li className="_jp7ctv">
           <Link href="/blog" className={navLinkClassName} {...navLinkProps}>
             Blog
           </Link>

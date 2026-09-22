@@ -1,0 +1,7 @@
+Bathroom manufacturer sample textures
+Retrieved: 2026-09-22
+Epoxy Grey 2: https://www.tubadzin.pl/produkt/epoxy-grey-2-plytka-gresowa-434778
+Macchia grey: https://www.tubadzin.pl/produkt/macchia-grey-plytka-scienna
+Purpose: preview of the selected bathroom materials. Images come from the linked manufacturer product pages. Pattern repetition and cut positions are illustrative. Macchia is rotated for vertical installation. Macchia is listed as matt + gloss; the user requires matt, which remains flagged in the product details.
+Bathroom design reference: public/references/bathroom-selected-reference.jpg copied from the user's wizki/17.jpg.
+Macchia grey sample: https://apiprod7ga8u.tubadzin.pl/media/original_images/PS-Macchia-grey_5tKuNqP.jpg

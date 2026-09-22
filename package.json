@@ -2,6 +2,7 @@
   "name": "website",
   "private": true,
   "scripts": {
+    "sync:home": "node tooling/sync-home.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
