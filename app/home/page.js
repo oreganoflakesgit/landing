@@ -1,5 +1,13 @@
+import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
 import { withBasePath } from "../../lib/paths";
 import styles from "./page.module.css";
+
+// Refresh the embedded document whenever its built assets change.
+const viewerVersion = createHash("sha256")
+  .update(readFileSync("public/flat-3d/index.html"))
+  .digest("hex")
+  .slice(0, 12);
 
 export const metadata = {
   title: "Home",
@@ -17,7 +25,7 @@ export default function FlatPage() {
     <main className={styles.page}>
       <iframe
         className={styles.viewer}
-        src={withBasePath("/flat-3d/index.html")}
+        src={withBasePath(`/flat-3d/index.html?v=${viewerVersion}`)}
         title="Interactive 3D flat"
       />
     </main>
