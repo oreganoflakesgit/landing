@@ -9,41 +9,6 @@
   background: #f5f3ee;
 }
 
-.page > nav {
-  position: relative;
-  inset: auto;
-  flex: 0 0 auto;
-  width: 100%;
-  height: auto;
-  min-height: 0;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 8px 16px;
-  color: #222;
-}
-
-.page > nav ul {
-  display: flex;
-  gap: 20px;
-}
-
-.page > nav a {
-  color: #26382e;
-}
-
-.page > nav a:hover,
-.page > nav a:focus-visible {
-  color: #000;
-  text-decoration: underline;
-}
-
-.page > nav img {
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
-}
-
 .viewer {
   display: block;
   width: 100%;

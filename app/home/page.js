@@ -1,4 +1,3 @@
-import SiteNav from "../../components/SiteNav";
 import { withBasePath } from "../../lib/paths";
 import styles from "./page.module.css";
 
@@ -16,7 +15,6 @@ export const metadata = {
 export default function FlatPage() {
   return (
     <main className={styles.page}>
-      <SiteNav />
       <iframe
         className={styles.viewer}
         src={withBasePath("/flat-3d/index.html")}
